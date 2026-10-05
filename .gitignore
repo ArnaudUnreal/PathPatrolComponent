@@ -1,11 +1,15 @@
-# Versionné : Source/, Plugins/, .gitignore et le .uproject. Tout le reste est ignoré.
+# Versionné : Source/, Config/, Plugins/ (sources et .uplugin uniquement), .gitignore et le .uproject. Tout le reste est ignoré.
 /*
 !/.gitignore
 !/*.uproject
 !/Source/
+!/Config/
 !/Plugins/
 
-# Dossiers générés dans les plugins
+# Dans Plugins/ : seulement le .uplugin et le dossier Source/ de chaque plugin
+/Plugins/**
+!/Plugins/**/
+!/Plugins/**/*.uplugin
+!/Plugins/**/Source/**
 /Plugins/**/Binaries/
 /Plugins/**/Intermediate/
-/Plugins/**/Content/
